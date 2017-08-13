@@ -8,6 +8,7 @@
 /spec/reports/
 /tmp/
 .DS_Store
+/*.gem
 
 # rspec failure tracking
 .rspec_status
