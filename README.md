@@ -20,6 +20,23 @@ Or install it yourself as:
 
 ## Usage
 
+### Config
+
+You can adjust the config by adding the following to your `_config.rb` file. Here is the the default settings.
+
+    littlefinger:
+      add_baseurl: true
+      in_production: true
+      in_development: true
+      include:
+        - assets
+
+All files found in the `include:` list will be fingerprinted. You can list folders and files.
+
+In your template use the `fingerprint` filter to render the correct path (including the `baseurl` unless you disable it in the config.)
+
+    {{ 'assets/img/foo.png' | fingerprint }}
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
