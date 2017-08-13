@@ -1,5 +1,5 @@
 module Jekyll
   module Littlefinger
-    VERSION = "0.1.0"
+    VERSION = "0.0.0-b"
   end
 end

@@ -1,7 +1,7 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "jekyll/littlefinger/version"
+require "jekyll-littlefinger/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-littlefinger"
@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["David Herse"]
   spec.email         = ["david.herse@fivegoodfriends.com.au"]
 
-  spec.summary       = "I little fingerprinting gem for Jekyll assets."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A little fingerprinting gem for Jekyll assets."
+  spec.homepage      = "https://github.com/davidherse/jekyll-littlefinger"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

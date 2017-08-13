@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "jekyll/littlefinger"
+require "jekyll-littlefinger"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
