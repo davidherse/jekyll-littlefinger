@@ -9,7 +9,8 @@ module Littlefinger
         "littlefinger" => {
           "include" => ["assets"],
           "environments" => ["production", "development"],
-          "add_baseurl" => true
+          "add_baseurl" => true,
+          "cdnurl" => ""
         }
       }
 

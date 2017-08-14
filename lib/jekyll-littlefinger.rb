@@ -25,17 +25,22 @@ module Jekyll
       asset_parent = File.dirname(input)
       fingerprint_name = File.basename(fingerprint_asset_path)
 
-      add_cdn(add_baseurl("#{asset_parent}/#{fingerprint_name}"))
+      if asset_parent.empty? || asset_parent.nil?
+        add_cdn(add_baseurl(fingerprint_name))
+      else 
+        add_cdn(add_baseurl(File.join(asset_parent, fingerprint_name)))
+      end
     end
 
     def add_baseurl(input)
       site = @context.registers[:site]
       base_url = site.config['baseurl']
       add_baseurl = site.config['littlefinger']['add_baseurl']
-      if add_baseurl &&  !base_url.nil? && !base_url.empty?
+
+      if add_baseurl && !base_url.nil? && !base_url.empty?
         input = input.gsub('./', '')
 
-        "#{base_url}/#{input}"
+        File.join(base_url, input)
       else
         input
       end
@@ -45,7 +50,7 @@ module Jekyll
       site = @context.registers[:site]
       cdnurl = site.config['littlefinger']['cdnurl']
 
-      if cdnurl.nil? && cdnurl.empty?
+      if cdnurl.nil? || cdnurl.empty?
         input
       else
         URI.join(cdnurl, input).to_s
