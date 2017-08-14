@@ -25,6 +25,7 @@ Or install it yourself as:
 You can adjust the config by adding the following to your `_config.rb` file. Here is the the default settings.
 
     littlefinger:
+      cdnurl: ''
       add_baseurl: true
       in_production: true
       in_development: true

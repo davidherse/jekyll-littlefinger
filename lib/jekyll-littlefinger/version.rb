@@ -1,3 +1,3 @@
 module Littlefinger
-  VERSION = "0.0.3-b"
+  VERSION = "0.0.14-b"
 end

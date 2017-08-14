@@ -11,4 +11,15 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  SOURCE_DIR = File.expand_path("../fixtures", __FILE__)
+  DEST_DIR   = File.expand_path("../dest",     __FILE__)
+
+  def source_dir(*files)
+    File.join(SOURCE_DIR, *files)
+  end
+
+  def dest_dir(*files)
+    File.join(DEST_DIR, *files)
+  end
 end

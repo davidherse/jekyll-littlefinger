@@ -9,6 +9,7 @@
 /tmp/
 .DS_Store
 /*.gem
-
+/spec/_fingertmp/
+/spec/dest/
 # rspec failure tracking
 .rspec_status
