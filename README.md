@@ -27,8 +27,9 @@ You can adjust the config by adding the following to your `_config.rb` file. Her
     littlefinger:
       cdnurl: ''
       add_baseurl: true
-      in_production: true
-      in_development: true
+      environments: 
+        - prodution
+        - development
       include:
         - assets
 

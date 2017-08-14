@@ -1,5 +1,9 @@
 timezone: UTC
-
+baseurl: "/p"
+plugins: 
+  - jekyll-littlefinger
+littlefinger:
+  cdnurl: "http://foo.com"
 defaults:
   -
     scope:
