@@ -6,6 +6,7 @@ littlefinger:
   include: 
     - assets
     - main.css
+    - style.css
 defaults:
   -
     scope:
