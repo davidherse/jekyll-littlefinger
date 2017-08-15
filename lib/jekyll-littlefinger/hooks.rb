@@ -29,7 +29,6 @@ module Littlefinger
         }
 
         config = Jekyll::Utils.deep_merge_hashes(site.config, config)
-
         puts "Creating #{config["destination"]} site..."
         site = Jekyll::Site.new(config)
         site.process

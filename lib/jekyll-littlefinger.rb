@@ -20,8 +20,16 @@ module Jekyll
       dest_parent = File.expand_path("../", site.dest)
       input = input.gsub('./', '')
       temp_asset_path = File.join(dest_parent, '_fingertmp', input)
+      source_asset_path = File.join(site.source, input)
 
-      fingerprint_asset_path = Fingerprint.new(temp_asset_path).path.gsub('/_fingertmp', '')
+      if File.file?(temp_asset_path) 
+        fingerprint_asset_path = Fingerprint.new(temp_asset_path).path.gsub('/_fingertmp', '')
+      end
+
+      if File.file?(source_asset_path) 
+        fingerprint_asset_path = Fingerprint.new(source_asset_path).path
+      end
+
       asset_parent = File.dirname(input)
       fingerprint_name = File.basename(fingerprint_asset_path)
 
