@@ -81,12 +81,12 @@ module Littlefinger
     end
 
     def self.cleanup(site)
-      destination = site.dest.split('/').last
-      temp_destination = self.temp_destination(site)
+      # destination = site.dest.split('/').last
+      # temp_destination = self.temp_destination(site)
 
-      if destination != "_fingertmp" && File.directory?(temp_destination)
-        FileUtils.remove_dir temp_destination, true
-      end
+      # if destination != "_fingertmp" && File.directory?(temp_destination)
+      #   FileUtils.remove_dir temp_destination, true
+      # end
     end
 
     def self.init
