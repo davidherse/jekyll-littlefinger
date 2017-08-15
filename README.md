@@ -7,16 +7,12 @@ A little fingerprinting gem for Jekyll assets.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jekyll-littlefinger'
+gem "jekyll-littlefinger", :git => "git://github.com/davidherse/jekyll-littlefinger.git"
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-littlefinger
 
 ## Usage
 
