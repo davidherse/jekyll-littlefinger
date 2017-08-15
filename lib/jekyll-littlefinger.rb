@@ -62,7 +62,7 @@ module Jekyll
       environments = site.config['littlefinger']['environments']
       destination = site.dest.split('/').last
 
-      destination != "_fingertmp" && (environments.include? environment)
+      destination == "_fingertmp" || (environments.include? environment)
     end
 
     def environment
