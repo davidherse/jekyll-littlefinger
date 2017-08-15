@@ -1,3 +1,3 @@
 module Littlefinger
-  VERSION = "0.0.22.beta"
+  VERSION = "0.0.23.beta"
 end

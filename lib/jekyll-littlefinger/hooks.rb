@@ -39,8 +39,9 @@ module Littlefinger
     def self.should_fingerprint(site)
       environments = site.config['littlefinger']['environments']
       destination = site.dest.split('/').last
+      jekyll_env = ENV["JEKYLL_ENV"].nil?  ? 'development' : ENV["JEKYLL_ENV"]
 
-      destination != "_fingertmp" && (environments.include? ENV["JEKYLL_ENV"])
+      destination != "_fingertmp" && (environments.include? jekyll_env)
     end
 
     def self.fingerprint_assets(site)
